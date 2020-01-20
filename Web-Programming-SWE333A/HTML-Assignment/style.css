@@ -1,0 +1,10 @@
+div {
+  margin: 20px;
+  padding: auto;
+  background-color: azure;
+}
+
+.tag-name {
+  font-size: large;
+  font-weight: bold;
+}

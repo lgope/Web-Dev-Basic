@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <h1>
         <center>Basic HTML</center>
     </h1>
@@ -163,13 +164,15 @@
         <span>Code:</span>
         <pre>
             &lt;blockquote&gt;
-            For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+            For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,
+            WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
             &lt;/blockquote&gt;            
         </pre>
 
         <span>Output :</span>
         <blockquote>
-            For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,
+            For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+            organization,
             WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5
             million globally.
         </blockquote>
@@ -483,29 +486,226 @@
     </div>
     <hr>
 
-
-
-
-
-    <!--  -tag-->
-    <!--  -tag-->
-    <!--  -tag-->
-    <!-- 
-    <div class="-tag">
-        <p class="tag-name">&lt;p&gt; &lt;/p&gt;</p>
-        <p>Defines</p>
+    <!--  svg-tag-->
+    <div class="svg-tag">
+        <p class="tag-name">&lt;svg&gt; &lt;/svg&gt;</p>
+        <p>Defines a container for SVG graphics</p>
         <span>Code:</span>
         <pre>
-            &lt;&gt;
-            &lt;/&gt;            
+            &lt;svg width="100" height="100"&gt;
+            &lt;circle  cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" /&gt;
+            &lt;/svg&gt;            
+        </pre>
+        <span>Output :</span><br>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="red" />
+        </svg>
+    </div>
+    <hr>
+
+    <h1>
+        <center>Audio / Video</center>
+    </h1>
+
+    <!--  audio-tag-->
+    <div class="audio-tag">
+        <p class="tag-name">&lt;audio&gt; &lt;/audio&gt;</p>
+        <p> Defines sound content</p>
+        <span>Code:</span>
+        <pre>
+            &lt;audio&gt;
+            &lt;source src="horse.ogg" type="audio/ogg"&gt;
+            &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+            &lt;/audio&gt;            
         </pre>
         <span>Output :</span>
+        <br>
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <hr>
+
+    <!--  video-tag-->
+    <div class="video-tag">
+        <p class="tag-name">&lt;video&gt; &lt;/video&gt;</p>
+        <p>Defines a video or movie</p>
+        <span>Code:</span>
+        <pre>
+            &lt;video&gt;
+            &lt;source src="movie.mp4" type="video/mp4"&gt;
+            &lt;source src="movie.ogg" type="video/ogg"&gt;
+            &lt;/video&gt;            
+        </pre>
+        <span>Output :</span>
+        <br>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <hr>
+
+    <!--  iframe-tag-->
+    <div class="iframe-tag">
+        <p class="tag-name">&lt;iframe&gt; &lt;/iframe&gt;</p>
+        <p>For youtube videos</p>
+        <span>Code:</span>
+        <pre>
+            &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ztyXD3Tz7u0?start=2" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;            
+        </pre>
+        <span>Output :</span>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ztyXD3Tz7u0?start=2" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    <hr>
+
+    <h1>
+        <center>Links</center>
+    </h1>
+    <!--  a-tag-->
+    <div class="a-tag">
+        <p class="tag-name">&lt;a&gt;&lt;/a&gt;</p>
+        <p>Defines a hyperlink</p>
+        <span>Code:</span>
+        <pre>
+            &lt;a href="https://github.com/" target="blank"&gt;Github&lt;/a&gt;          
+        </pre>
+        <span>Output :</span>
+        <a href="https://github.com/" target="blank">Github</a>
+    </div>
+    <hr>
+
+    <!--  link-tag-->
+    <div class="link-tag">
+        <p class="tag-name">&lt;link&gt;</p>
+        <p>Defines the relationship between a document and an external resource (most used to link to style sheets)
+        </p>
+        <span>Code:</span>
+        <pre>
+            &lt;link  rel="stylesheet" type="text/css" href="styles.css"&gt;        
+        </pre>
+        <!-- <span>Output :</span> -->
+    </div>
+    <hr>
+
+    <h1>
+        <center>Tables</center>
+    </h1>
+
+    <!-- table-tag-->
+    <div class="table-tag">
+        <p class="tag-name">&lt;table&gt; &lt;/table&gt;</p>
+        <p> Defines a table</p>
+        <span>Code:</span>
+        <pre>
+            &lt;table  border="1"&gt;
+            &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+            &lt;td&gt;Name One&lt;/td&gt;
+            &lt;td&gt;122-65-45&lt;/td&gt;
+            &lt;/tr&gt;            
+            &lt;/table&gt;            
+        </pre>
+        <span>Output :</span>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+            </tr>
+            <tr>
+                <td>Name One</td>
+                <td>122-65-45</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+
+    <h1>
+        <center>Styles and Semantics</center>
+    </h1>
+    <!--  div-tag-->
+    <div class="div-tag">
+        <p class="tag-name">&lt;div&gt; &lt;/div&gt;</p>
+        <p> Defines a section in a document</p>
+        <span>Code:</span>
+        <pre>
+            &lt;div style="background-color:lightblue"&gt;
+            &lt;h3&gt; This is a heading &lt;/h3&gt; 
+            &lt;p&gt; This is a paragraph.&lt;/p&gt; 
+            &lt;/div&gt;            
+        </pre>
+        <span>Output :</span>
+        <div style="background-color:lightblue">
+            <h3>This is a heading</h3>
+            <p>This is a paragraph.</p>
+        </div>
+    </div>
+    <hr>
+
+    <!--  span-tag-->
+    <div class="span-tag">
+        <p class="tag-name">&lt;span&gt; &lt;/span&gt;</p>
+        <p> Defines a section in a document</p>
+        <span>Code:</span>
+        <pre>
+            &lt;p&gt;My mother has &lt;span style="color:blue"&gt;blue&lt;/span&gt;  eyes.&lt;/p&gt;            
+        </pre>
+        <span>Output :</span>
+        <p>Someone has <span style="color:rgb(70, 224, 78)">Green</span> eyes.</p>
+    </div>
+    <hr>
+
+    <h1>
+        <center>Programming</center>
+    </h1>
+
+    <!--  script-tag-->
+    <div class="script-tag">
+        <p class="tag-name">&lt;script&gt; &lt;/script&gt;</p>
+        <p>Defines a client-side script</p>
+        <span>Code:</span>
+        <pre>
+            &lt;p id="demo"&gt;&lt;/p&gt;
+            &lt;script&gt;
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+            &lt;/script&gt;            
+        </pre>
+        <span>Output :</span>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        </script>
     </div>
     <hr>
 
 
+    <!--  -tag-->
+    <!-- 
+        <div class="-tag">
+            <p class="tag-name">&lt;p&gt; &lt;/p&gt;</p>
+            <p>Defines</p>
+            <span>Code:</span>
+            <pre>
+                &lt;&gt;
+                &lt;/&gt;            
+            </pre>
+            <span>Output :</span>
+        </div>
+        <hr>
+        
+
 -->
     <!-- <span>&lt; &gt;</span> -->
+
 
 
 </body>

@@ -90,7 +90,7 @@
     <hr>
 
     <!--  abbr-tag-->
-    <div class=" abbr-tag">
+    <div class="abbr-tag">
         <p class="tag-name">&lt;abbr&gt; &lt;/abbr&gt;</p>
         <p> Defines an abbreviation or an acronym</p>
 
@@ -106,7 +106,7 @@
     <hr>
 
     <!-- address -->
-    <div class=" -tag">
+    <div class="address-tag">
         <p class="tag-name">&lt;address&gt; &lt;/address&gt;</p>
         <p> Defines contact information for the author/owner of a document/article</p>
 
@@ -156,7 +156,7 @@
     <hr>
 
     <!--  blockquote-tag-->
-    <div class=" blockquote-tag">
+    <div class="blockquote-tag">
         <p class="tag-name">&lt;blockquote&gt; &lt;b/lockquote&gt;</p>
         <p> Defines a section that is quoted from another source</p>
 
@@ -177,7 +177,7 @@
     </div>
     <hr>
     <!--  center-tag-->
-    <div class=" center-tag">
+    <div class="center-tag">
         <p class="tag-name">&lt;center&gt; &lt;/center&gt;</p>
         <p>Defines centered text</p>
 
@@ -193,7 +193,7 @@
 
 
     <!--  big-tag-->
-    <div class=" big-tag">
+    <div class="big-tag">
         <p class="tag-name">&lt;big&gt; &lt;/big&gt;</p>
         <p>Defines big text</p>
         <span>Code:</span>
@@ -207,7 +207,7 @@
     <hr>
 
     <!--  del-tag-->
-    <div class=" del-tag">
+    <div class="del-tag">
         <p class="tag-name">&lt;del&gt; &lt;/del&gt;</p>
         <p> Defines text that has been deleted from a document</p>
 
@@ -222,7 +222,7 @@
     <hr>
 
     <!--  em-tag-->
-    <div class=" em-tag">
+    <div class="em-tag">
         <p class="tag-name">&lt;em&gt; &lt;/em&gt;</p>
         <p> Defines emphasized text </p>
 
@@ -237,7 +237,7 @@
     <hr>
 
     <!--  dfn-tag-->
-    <div class=" dfn-tag">
+    <div class="dfn-tag">
         <p class="tag-name">&lt;dfn&gt; &lt;/dfn&gt;</p>
         <p>Represents the defining instance of a term</p>
 
@@ -251,7 +251,7 @@
     </div>
     <hr>
     <!--  i-tag-->
-    <div class=" i-tag">
+    <div class="i-tag">
         <p class="tag-name">&lt;i&gt; &lt;/i&gt;</p>
         <p> Defines a part of text in an alternate voice or mood</p>
 
@@ -266,7 +266,7 @@
     <hr>
 
     <!--  strong-tag-->
-    <div class=" strong-tag">
+    <div class="strong-tag">
         <p class="tag-name">&lt;strong&gt; &lt;/strong&gt;</p>
         <p> Defines important text</p>
 
@@ -285,7 +285,7 @@
     </h1>
 
     <!--  form-tag-->
-    <div class=" form-tag">
+    <div class="form-tag">
         <p class="tag-name">&lt;form&gt; &lt;/form&gt;, &lt;input&gt;</p>
         <p> Defines an HTML form for user input</p>
 
@@ -307,7 +307,7 @@
     </div>
 
     <!--  textarea-tag-->
-    <div class=" textarea-tag">
+    <div class="textarea-tag">
         <p class="tag-name">&lt;textarea&gt; &lt;/textarea&gt;</p>
         <p>Defines a multiline input control (text area)</p>
 
@@ -326,7 +326,7 @@
     <hr>
 
     <!--  button-tag-->
-    <div class=" button-tag">
+    <div class="button-tag">
         <p class="tag-name">&lt;button&gt; &lt;/button&gt;</p>
         <p>Defines a clickable button</p>
 
@@ -344,14 +344,14 @@
     <hr>
 
     <!--  select-tag-->
-    <div class=" select-tag">
-        <p class="tag-name">&lt;select&gt; &lt;/select&gt;</p>
-        <p>Defines</p>
+    <div class="select-tag">
+        <p class="tag-name">&lt;select&gt; &lt;/select&gt;, &lt;option&gt; &lt;/option&gt;</p>
+        <p>Defines a drop-down list</p>
 
         <span>Code:</span>
         <pre>
             &lt;select&gt;
-            &lt;option value="volvo" &gt; Volvo &lt;/option &gt;
+            &lt;option value="lambo" &gt; Lambo &lt;/option &gt;
             &lt;option value="mercedes" &gt; Mercedes &lt;/option &gt;
             &lt;option value="Audi" &gt; Audi &lt;/option &gt;
             &lt;option value="bmw" &gt; BMW &lt;/option &gt;
@@ -360,7 +360,7 @@
 
         <span>Output :</span>
         <select>
-            <option value="volvo">Volvo</option>
+            <option value="lambo">Lambo</option>
             <option value="saab">Saab</option>
             <option value="mercedes">Mercedes</option>
             <option value="audi">Audi</option>
@@ -368,9 +368,108 @@
 
     </div>
     <hr>
+    <!--  optgroup-tag-->
+    <div class="optgroup-tag">
+        <p class="tag-name">&lt;optgroup&gt; &lt;/optgroup&gt;</p>
+        <p> Defines a group of related options in a drop-down list</p>
+        <span>Code:</span>
+        <pre>
+            &lt;select&gt;
+            &lt;optgroup  label="Swedish Cars"&gt;
+            &lt;option value="volvo"&gt;Volvo&lt;/option&gt; 
+            &lt;option value="saab"&gt;Saab&lt;/option&gt;           
+            &lt;/optgroup&gt; 
+            
+            &lt;optgroup  label="German Cars"&gt;
+            &lt;option value="Mercedes"&gt;Mercedes&lt;/option&gt;
+            &lt;option value="Audi"&gt;Audi&lt;/option&gt;            
+            &lt;/optgroup&gt; 
+            &lt;/select&gt;            
+        </pre>
+        <span>Output :</span>
+        <select>
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+    </div>
+    <hr>
+
+    <!--  label-tag-->
+    <div class="label-tag">
+        <p class="tag-name">&lt;label&gt; &lt;/label&gt;</p>
+        <p> Defines a label for an <input> element</p>
+        <span>Code:</span>
+        <pre>
+            &lt;form&gt;
+            &lt;label for="male"&gt;Male &lt;/label&gt;
+            &lt;input type="radio" name="gender" id="male" value="male"&gt;
+            &lt;br&gt;
+            
+            &lt;label for="female"&gt; Female &lt;/label&gt;
+            &lt;input type="radio" name="gender" id="female" value="female"&gt;
+            &lt;br&gt;
+
+            &lt;label for="other"&gt;Other &lt;/label&gt;
+            &lt;input type="radio" name="gender" id="other" value="other"&gt;
+            &lt;br&gt;
+
+            &lt;input type="submit" value="Submit"&gt;
+
+            &lt;/form&gt;            
+        </pre>
+        <span>Output :</span>
+        <form action="/action_page.php">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male"><br>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female"><br>
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other" value="other"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <hr>
+
+    <!--  fieldset-tag-->
+    <div class="fieldset-tag">
+        <p class="tag-name">&lt;fieldset&gt; &lt;/fieldset&gt;</p>
+        <p>Groups related elements in a form</p>
+        <span>Code:</span>
+        <pre>
+            &lt;form&gt;
+            &lt;fieldset&gt;
+            &lt;legend&gt;Personalia:&lt;/legend&gt;            
+            Name:  &lt;intput type="text"&gt;&lt;br&gt;            
+            Email:  &lt;imput type="text"&gt;&lt;br&gt;            
+            Date of birth:  &lt;intput type="text"&gt;           
+            &lt;/fieldset&gt;            
+            &lt;/form&gt;            
+        </pre>
+        <span>Output :</span>
+        <form>
+            <fieldset>
+                <legend>Personalia:</legend>
+                Name: <input type="text"><br>
+                Email: <input type="text"><br>
+                Date of birth: <input type="text">
+            </fieldset>
+        </form>
+    </div>
+    <hr>
 
 
 
+
+
+
+
+    <!--  -tag-->
     <!--  -tag-->
     <!--  -tag-->
     <!--  -tag-->

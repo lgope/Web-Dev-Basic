@@ -192,52 +192,196 @@
     <hr>
 
 
-    <!--  -tag-->
-    <div class=" -tag">
-        <p class="tag-name">&lt;p&gt; &lt;/p&gt;</p>
-        <p>Defines</p>
-    </div>
-</body>
-<span>Code:</span>
-<pre>
-            &lt;&gt;
-            &lt;/&gt;            
+    <!--  big-tag-->
+    <div class=" big-tag">
+        <p class="tag-name">&lt;big&gt; &lt;/big&gt;</p>
+        <p>Defines big text</p>
+        <span>Code:</span>
+        <pre>
+            &lt;big&gt; Bigger text &lt;/big&gt;            
         </pre>
 
-<span>Output :</span>
+        <span>Output :</span>
+        <big>Bigger text</big>
+    </div>
+    <hr>
 
-</div>
-<hr>
+    <!--  del-tag-->
+    <div class=" del-tag">
+        <p class="tag-name">&lt;del&gt; &lt;/del&gt;</p>
+        <p> Defines text that has been deleted from a document</p>
 
+        <span>Code:</span>
+        <pre>
+            &lt;p&gt; My favorite color is &lt;del&gt; blue &lt;/del&gt; green! &lt;/p&gt;          
+        </pre>
 
+        <span>Output :</span>
+        <p>My favorite color is <del>blue</del> green!</p>
+    </div>
+    <hr>
 
+    <!--  em-tag-->
+    <div class=" em-tag">
+        <p class="tag-name">&lt;em&gt; &lt;/em&gt;</p>
+        <p> Defines emphasized text </p>
 
+        <span>Code:</span>
+        <pre>
+            &lt;em&gt; Emphasized text &lt;/em&gt;            
+        </pre>
 
-<!--  -tag-->
-<!--  -tag-->
-<!--  -tag-->
-<!-- 
-        
-    <div class=" -tag">
-        <p class="tag-name">&lt;p&gt; &lt;/p&gt;</p>
+        <span>Output :</span>
+        <em>Emphasized text</em>
+    </div>
+    <hr>
+
+    <!--  dfn-tag-->
+    <div class=" dfn-tag">
+        <p class="tag-name">&lt;dfn&gt; &lt;/dfn&gt;</p>
+        <p>Represents the defining instance of a term</p>
+
+        <span>Code:</span>
+        <pre>
+            &lt;p &gt;&lt;dfn&gt;HTML&lt;/dfn&gt;is the standard markup language for creating web pages.&lt;/p&gt;
+        </pre>
+        <span>Output :</span>
+        <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+
+    </div>
+    <hr>
+    <!--  i-tag-->
+    <div class=" i-tag">
+        <p class="tag-name">&lt;i&gt; &lt;/i&gt;</p>
+        <p> Defines a part of text in an alternate voice or mood</p>
+
+        <span>Code:</span>
+        <pre>
+            &lt;p&gt; He named his car&lt;i&gt;The lightning&lt;/i&gt;, because it was very fast. &lt;/p&gt;            
+        </pre>
+
+        <span>Output :</span>
+        <p>He named his car <i>The lightning</i>, because it was very fast.</p>
+    </div>
+    <hr>
+
+    <!--  strong-tag-->
+    <div class=" strong-tag">
+        <p class="tag-name">&lt;strong&gt; &lt;/strong&gt;</p>
+        <p> Defines important text</p>
+
+        <span>Code:</span>
+        <pre>
+            &lt;strong&gt;Strong text &lt;/strong&gt;            
+        </pre>
+
+        <span>Output :</span>
+        <strong>Strong text</strong>
+    </div>
+    <hr>
+
+    <h1>
+        <center>Forms and Input</center>
+    </h1>
+
+    <!--  form-tag-->
+    <div class=" form-tag">
+        <p class="tag-name">&lt;form&gt; &lt;/form&gt;, &lt;input&gt;</p>
+        <p> Defines an HTML form for user input</p>
+
+        <span>Code:</span>
+        <pre>
+            &lt;form&gt;
+            First Name: &lt;input type="text"  name="fname"&gt;
+            Last Name: &lt;input type="text"  name="lname"&gt;
+            &lt;input type="submit" value="Submit"&gt;            
+            &lt;/form&gt;            
+        </pre>
+
+        <span>Output :</span>
+        <form action="/action_page.php" method="get">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!--  textarea-tag-->
+    <div class=" textarea-tag">
+        <p class="tag-name">&lt;textarea&gt; &lt;/textarea&gt;</p>
+        <p>Defines a multiline input control (text area)</p>
+
+        <span>Code:</span>
+        <pre>
+            &lt;textarea rows="4" cols="50"&gt;
+            At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+            &lt;/textarea&gt;            
+        </pre>
+
+        <span>Output :</span><br>
+        <textarea rows="4" cols="50">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+        </textarea>
+
+    </div>
+    <hr>
+
+    <!--  button-tag-->
+    <div class=" button-tag">
+        <p class="tag-name">&lt;button&gt; &lt;/button&gt;</p>
+        <p>Defines a clickable button</p>
+
+        <span>Code:</span>
+        <pre>
+            &lt;h4 &gt; The Button Element &lt;/h4 &gt;
+            &lt;button type="button" onclick="alert('Hello world!')"&gt; Click Me! &lt;/button&gt;            
+        </pre>
+
+        <span>Output :</span>
+        <h4>The Button Element</h4>
+        <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
+    </div>
+    <hr>
+
+    <!--  select-tag-->
+    <div class=" select-tag">
+        <p class="tag-name">&lt;select&gt; &lt;/select&gt;</p>
         <p>Defines</p>
 
         <span>Code:</span>
         <pre>
-            &lt;&gt;
-            &lt;/&gt;            
+            &lt;select&gt;
+            &lt;option value="volvo" &gt; Volvo &lt;/option &gt;
+            &lt;option value="mercedes" &gt; Mercedes &lt;/option &gt;
+            &lt;option value="Audi" &gt; Audi &lt;/option &gt;
+            &lt;option value="bmw" &gt; BMW &lt;/option &gt;
+            &lt;/select&gt;            
         </pre>
 
         <span>Output :</span>
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
 
     </div>
     <hr>
 
 
+
+    <!--  -tag-->
+    <!--  -tag-->
+    <!--  -tag-->
+    <!-- 
+        
+
+
 -->
+    <!-- <span>&lt; &gt;</span> -->
 
 
-<!-- <span>&lt; &gt;</span> -->
 </body>
 
 </html>

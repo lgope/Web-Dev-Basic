@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculation-JS</title>
+</head>
+
+<body>
+    <label>Enter One Number:</label></br>
+    <input id="numOne" type="number" /></br>
+    <label>Enter Another Number:</label></br>
+    <input id="numtwo" type="number" /></br>
+    <label>Agreement of Terms and Conditions</label></br>
+    <input id="agree" onclick="agreement()" type="checkbox" />I agree</br>
+    <input id="sum" onclick="sumHTML()" type="button" value="Click to Add" disabled /></br>
+
+    <span id="result"></span>
+    <script type="text/javascript">
+        // Enable / Disable HTML tag
+        function agreement() {
+            if (document.getElementById('agree').checked == true) {
+                document.getElementById('sum').disabled = false;
+            } else {
+                document.getElementById('sum').disabled = true;
+            }
+        }
+
+        var sumHTML = function () {
+            // Take input from user
+            var numOne = document.getElementById('numOne').value;
+            var numtwo = document.getElementById('numtwo').value;
+            // Convert the user input to Number and perform addition
+            var sum = Number(numOne) + Number(numtwo);
+            // Confirmation Message to user
+            confirm("You have entered: " + numOne + " and " + numtwo);
+            // Display the result on console of browser
+            console.log("The sum of entered numbers is: " + sum);
+            // Display the result on HTML tag
+            document.getElementById('result').innerHTML = "The sum of entered numbers is: " + sum;
+        }
+
+
+        function sumPrompt() {
+            // Take input from user
+            var numOne = prompt("Enter a Number:");
+            var numtwo = prompt("Enter another Number:");
+            // Confirmation Message to user
+            confirm("You have entered: " + numOne + " and " + numtwo);
+            // Convert the user input to Number and perform addition
+            var sum = Number(numOne) + Number(numtwo);
+            // Display the result on console of browser
+            console.log("The sum of entered numbers is: " + sum);
+            // Display the result on HTML tag
+            document.getElementById('result').innerHTML = "The sum of entered numbers is: " + sum;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

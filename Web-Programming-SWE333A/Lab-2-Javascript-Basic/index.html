@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript (Lab-2)</title>
+</head>
+
+<body>
+
+    <p>JavaScript Lab Practice</p>
+
+    <p id="show-tag"></p>
+
+    <script type="text/javascript">
+        // Variable Declaration 
+        var variable_int = 5;
+        var variable_float = 0.5;
+        var variable_char = '5';
+        var variable_string = 'This is a String value';
+
+        var name;
+
+        // Function Declaration 
+        var variable_user_define_function = function () {
+            alert("It's a funtion");
+        }
+
+        function user_defined_function() {
+            alert("User defined function");
+            name = prompt("Enter your name! 🙂");
+            confirm("Are you sure?");
+
+            document.getElementById('show-tag').innerHTML = "My name is " + name;
+        }
+
+        // Function Call
+        variable_user_define_function();
+        user_defined_function();
+
+    </script>
+
+</body>
+
+</html>

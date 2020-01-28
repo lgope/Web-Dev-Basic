@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grad Calcultion Dynamic</title>
+</head>
+
+<body>
+
+    <div class="sub_input_form">
+        <form onsubmit="return false">
+            <h3> Enter Subject and Result Information </h3>
+
+            <label>Course Title:</label>
+            <input type="text" id="c_title" required> </br>
+            <label>Course Code:</label>
+            <input type="text" id="c_code" required> </br>
+            <label>Course Credit:</label>
+            <input type="number" id="c_credit" required> </br>
+            <label>GPA:</label>
+            <input type="number" id="c_gpa" required> </br>
+            <input type="button" value="Add Subject" onclick="addData()" />
+            <input type="button" onclick="calculate_sgpa()" value="SGPA Calculate" />
+        </form>
+    </div>
+
+    <table border=1 id="addData" style="display:none">
+        <tr>
+            <td>Course Title</td>
+            <td>Course Code</td>
+            <td>Course Credit</td>
+            <td>GPA</td>
+        </tr>
+    </table>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grad Calcultion</title>
+</head>
+
+<body>
+    <div class="sub_input_form">
+        <form onsubmit="return false">
+            <span>Subject 1:</span> <br>
+            <label for="sub1_code">Code:</label>
+            <input id="sub1_code" type="text"> <br>
+
+            <label for="sub1_title">Title:</label>
+            <input id="sub1_title" type="text"> <br>
+
+            <label for="sub1_credit">Credit:</label>
+            <input id="sub1_credit" type="number"> <br>
+
+            <label for="sub1_gpa">GPA:</label>
+            <input id="sub1_gpa" type="number"> <br>
+            <hr>
+
+            <span>Subject 2:</span> <br>
+            <label for="sub2_code">Code:</label>
+            <input id="sub2_code" type="text"> <br>
+
+            <label for="sub2_title">Title:</label>
+            <input id="sub2_title" type="text"> <br>
+
+            <label for="sub2_credit">Credit:</label>
+            <input id="sub2_credit" type="number"> <br>
+
+            <label for="sub2_gpa">GPA:</label>
+            <input id="sub2_gpa" type="number"> <br>
+
+            <input type="submit" value="submit" onclick="calculateGrad()">
+        </form>
+    </div>
+
+
+    <div id="result_table"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

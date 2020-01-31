@@ -1,0 +1,14 @@
+body {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 50px;
+  background: rgb(248, 241, 241);
+  font-size: 25px;
+}
+
+.thank_btn {
+  background-color: #d94a38;
+  width: 90px;
+  height: 20px;
+  padding: 40px;
+}

@@ -16,7 +16,7 @@ class Crud extends DBConfig {
         $rows = array();
  
  
-        while ($row = $result->fetch_assoc($result)) {
+        while ($row = $result->fetch_assoc()) {
             $rows[] = $row;
          }
          return $rows;

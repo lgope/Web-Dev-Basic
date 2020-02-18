@@ -29,9 +29,27 @@ $resul = $crud->getAllData($sql);
     </table>
 
     <script type="text/javascript">
-        $('#AddData').click(function(){
-            $.get('layout/dataAdd.php', function(response) {
-            $('#DataAdd').html(response);
-        });
-        });
+            $(document).ready(function () {
+                $('#AddData').click(function(){
+                    $.get('layout/dataAdd.php', function(response) {
+                        $('#DataAdd').html(response);
+                    });
+                });
+
+                $('.dataDelete').on('click',function(){
+                var id = $(this).attr('id');
+                $.ajax({
+                    url:'functions/delete.php',
+                    type:'POST',
+                    data:{id:id},
+                    success :function(response){
+                        if(response=="Successfull"){
+                            $.get('functions/index.php',function(data){
+                                $('#DataView').html(data);
+                            });
+                        }
+                    }
+                });
+            });
+        })
     </script>

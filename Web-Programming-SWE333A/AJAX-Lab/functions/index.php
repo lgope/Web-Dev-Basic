@@ -15,28 +15,28 @@ $resul = $crud->getAllData($sql);
     <th>Action</th>
     </tr>
     <?php
-    foreach($resul as $res) {
-        echo "<tr>";
-        echo "<td>".$res['name']."</td>";
-        echo "<td>".$res['student_id']."</td>";
-        echo "<td>".$res['email']."</td>";
-        echo "<td><button id='$res[id]' class='dataEdit'>Edit</button> | <button id='$res[id]' class='dataDelete'>Delete</button></td></tr>";
+        foreach($resul as $res) {
+            echo "<tr>";
+            echo "<td>".$res['name']."</td>";
+            echo "<td>".$res['student_id']."</td>";
+            echo "<td>".$res['email']."</td>";
+            echo "<td><button id='$res[id]' class='dataEdit'>Edit</button> | <button id='$res[id]' class='dataDelete'>Delete</button></td></tr>";
 
-    }
+        }
     ?>
 
 
     </table>
 
     <script type="text/javascript">
-            $(document).ready(function () {
+        $(document).ready(function () {
                 $('#AddData').click(function(){
-                    $.get('layout/dataAdd.php', function(response) {
-                        $('#DataAdd').html(response);
-                    });
+                $.get('layout/dataAdd.php', function(response) {
+                $('#DataAdd').html(response);
                 });
+            });
 
-                $('.dataDelete').on('click',function(){
+            $('.dataDelete').on('click',function(){
                 var id = $(this).attr('id');
                 $.ajax({
                     url:'functions/delete.php',
@@ -51,5 +51,18 @@ $resul = $crud->getAllData($sql);
                     }
                 });
             });
-        })
+
+            $('.dataEdit').on('click', function(){
+                var id = $(this).attr('id');
+                $.ajax({
+                    url:'functions/edit.php',
+                    type:'POST',
+                    data:{id:id},
+                    success :function(response){
+                        $('#DataEdit').html(response);
+                    }
+                });
+            });
+
+        });
     </script>

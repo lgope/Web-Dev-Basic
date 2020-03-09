@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship | Waiver</title>
+</head>
+
+<body>
+    <p class="scholarship-form">
+        <hr>
+        <form>
+            <h1>Scholarship/Waiver Calculator</h1>
+
+            <label for="">Select Your Campus</label> <br>
+            <select id="campus-options">
+                <option value="main-campus">Main Campus</option>
+                <option value="parmanent-campus">Parmanent Campus</option>
+            </select> <br>
+
+            <label for="sgpa">Enter SGPA</label><br>
+            <input type="number" id="sgpa" placeholder="SGPA of last semester"> <br>
+
+            <label for="payment">Do you want to know how much you need to pay?</label> <br>
+            <input type="radio" id="payment-yes" value="Yes" onclick="amountField()">Yes<br>
+
+            <label for="total-amount">Enter Total Amount Shown on Student Portal</label> <br>
+            <input type="number" id="amount" placeholder="Enter the Amount" disabled> <br>
+
+            <label for="hsc-scholarship">Do you have previous Scholarship on your H.Sc result?</label> <br>
+            <input type="radio" id="hsc-scholarship-yes" name="hsc-scholarship" onclick="schorlarshipField()"> Yes <br>
+            <input type="radio" id="hsc-scholarship-no" name="hsc-scholarship" onclick="schorlarshipField()"> No <br>
+
+            <label for="scholarship-amount-parcentage">If Yes then how much? (In percentage)</label> <br>
+            <input type="number" id="scholarship-amount-parcentage" placeholder="Enter the percentage" disabled> <br>
+            <br>
+
+            <input type="button" id="Calculate-scholarship-btn" onClick="calculateScholarship()"
+                value="Calculate the scholarship">
+
+            <input type="button" id="calculate-amount-btn" onClick="calculateAmount()" value="Calculate the Amount">
+
+        </form>
+        <p id="total-scholarship-amount-result"></p>
+        <p id="total-amount-result"></p>
+        </div>
+
+        <script type="text/javascript">
+
+            // amount field active or disable
+            function amountField() {
+                if (document.getElementById('payment-yes').checked) {
+                    document.getElementById('amount').disabled = false;
+                }
+            }
+
+            // schorlarship amount field field active or disable
+            function schorlarshipField() {
+                if (document.getElementById('hsc-scholarship-yes').checked) {
+                    document.getElementById('scholarship-amount-parcentage').disabled = false;
+                } else {
+                    document.getElementById('scholarship-amount-parcentage').disabled = true;
+                }
+            }
+
+            function calculateScholarship() {
+                var campus = document.getElementById('campus-options').value;
+                var sgpa = Number(document.getElementById('sgpa').value);
+                var hscSscholarship = Number(document.getElementById('scholarship-amount-parcentage').value);
+
+                var percentageInput = document.getElementById('scholarship-amount-parcentage');
+
+                totalScholarship = hscSscholarship;
+
+                if (campus === 'parmanent-campus') {
+                    totalScholarship = 5 + hscSscholarship;
+                }
+
+                if (sgpa == 4) {
+                    totalScholarship += 50;
+                } else if (sgpa >= 3.90 && sgpa <= 3.99) {
+                    totalScholarship += 30;
+                } else if (sgpa >= 3.85 && sgpa <= 3.89) {
+                    totalScholarship += 20;
+                } else if (sgpa >= 3.80 && sgpa <= 3.84) {
+                    totalScholarship += 10;
+                }
+
+                document.getElementById('total-scholarship-amount-result').innerHTML = 'Your total Scholarship = ' + totalScholarship + '%';
+            }
+
+            function calculateAmount() {
+                var amount = Number(document.getElementById('amount').value);
+
+                var totalAmount = amount - (amount * (totalScholarship / 100));
+
+                document.getElementById('total-amount-result').innerHTML = 'Your total Amount = ' + totalAmount + 'tk';
+            }
+        </script>
+</body>
+
+</html>

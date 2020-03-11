@@ -13,28 +13,85 @@
         <h1>Regitration for Convocation</h1>
         <hr>
 
-        <form>
-            <input type="email" id="email" placeholder="Email">
-            <input type="number" id="" placeholder="Mobile No"> <br><br>
+        <form onsubmit="return false">
 
-            <input type="text" id="" placeholder="Present Address">
-            <input type="text" id="" placeholder="Permanent Address"> <br><br>
+            <fieldset>
+                <legend>Apply Here</legend>
+                <input type="email" id="email" placeholder="Email" onkeyup="validateForm()" required>
 
-            <input type="text" id="" placeholder="Payment Date">
-            <input type="text" name="" id=""> <br><br>
+                <span id="bd-number-format">+880</span>
+                <input type="number" id="mobile-no" placeholder="Mobile No" onkeyup="validateForm()" required> <br><br>
 
-            <input type="text" id="" placeholder="Money Receipt/Transaction No.">
-            <input type="text" id="" placeholder="Paid Amount"> <br><br>
 
-            <input type="radio"> Do you want to keep gown? <br><br>
+                <input type="text" id="present-address" placeholder="Present Address" onkeyup="validateForm()" required>
+                <input type="text" id="permanent-address" placeholder="Permanent Address" maxlength="5"
+                    onkeyup="validateForm()" required> <br><br>
 
-            <input type="submit" value="Submit">
+                <input type="text" id="payment-date" placeholder="Payment Date" onkeyup="validateForm()" required>
+                <select id="payment-options" onchange="maxDefine()" required>
+                    <option value="payment-method">Payment Method</option>
+                    <option id="bkash-payment" value="bKash">bKash</option>
+                    <option id="cash-payment" value="cash">cash</option>
+                </select> <br> <br>
+
+                <input type="number" id="receipt-transaction-no" placeholder="Money Receipt/Transaction No."
+                    maxlength="5" onkeyup="validateForm()" required>
+                <input type="text" id="paid-amount" onkeyup="validateForm()" placeholder="Paid Amount"
+                    onkeyup="validateForm()" required> <br><br>
+
+                <input type="radio" id="gown-check" onkeyup="validateForm()" required> Do you want to keep gown?
+                <br><br>
+                <p id="form-done-result"></p>
+
+                <input type="submit" id="submit-btn" value="Submit" onclick="submitDone()" disabled>
+            </fieldset>
 
 
         </form>
-
-
     </div>
+
+    <script type="text/javascript">
+        var formDoneInfo = document.getElementById('form-done-result');
+
+        function maxDefine() {
+
+            if (document.getElementById('payment-options').value == 'bKash') {
+                document.getElementById('receipt-transaction-no').maxLength = '5';
+            } else {
+                document.getElementById('receipt-transaction-no').maxLength = '10';
+            }
+        }
+
+
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var mobileNo = document.getElementById('mobile-no').value;
+            var presentAddress = document.getElementById('present-address').value;
+            var permanentAddress = document.getElementById('permanent-address').value;
+            var paymentDate = document.getElementById('payment-date').value;
+            var paymentOptions = document.getElementById('payment-options').value;
+            var rtNo = document.getElementById('receipt-transaction-no').value;
+            var paidAmount = Number(document.getElementById('paid-amount').value);
+
+            if (email && mobileNo && presentAddress && permanentAddress && paymentDate && paymentOptions && rtNo && paidAmount) {
+                document.getElementById('submit-btn').disabled = false;
+            } else {
+                document.getElementById('submit-btn').disabled = true;
+            }
+        }
+
+        function submitDone() {
+
+            var paidAmount = Number(document.getElementById('paid-amount').value);
+
+            if (document.getElementById('gown-check').checked && paidAmount < 6800) {
+                formDoneInfo.innerHTML = 'Not Done! You Need to Pay 6800 tk';
+            } else {
+                formDoneInfo.innerHTML = 'Done!';
+            }
+            document.getElementById('form-done-result')
+        }
+    </script>
 </body>
 
 </html>

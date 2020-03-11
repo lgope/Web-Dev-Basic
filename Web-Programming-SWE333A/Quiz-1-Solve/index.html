@@ -9,37 +9,42 @@
 
 <body>
     <p class="scholarship-form">
-        <hr>
         <form>
-            <h1>Scholarship/Waiver Calculator</h1>
+            <fieldset>
+                <hr>
+                <h1>Scholarship/Waiver Calculator</h1>
 
-            <label for="">Select Your Campus</label> <br>
-            <select id="campus-options">
-                <option value="main-campus">Main Campus</option>
-                <option value="parmanent-campus">Parmanent Campus</option>
-            </select> <br>
+                <label for="">Select Your Campus</label> <br>
+                <select id="campus-options">
+                    <option value="main-campus">Main Campus</option>
+                    <option value="parmanent-campus">Parmanent Campus</option>
+                </select> <br>
 
-            <label for="sgpa">Enter SGPA</label><br>
-            <input type="number" id="sgpa" placeholder="SGPA of last semester"> <br>
+                <label for="sgpa">Enter SGPA</label><br>
+                <input type="number" id="sgpa" placeholder="SGPA of last semester"> <br>
 
-            <label for="payment">Do you want to know how much you need to pay?</label> <br>
-            <input type="radio" id="payment-yes" value="Yes" onclick="amountField()">Yes<br>
+                <label for="payment">Do you want to know how much you need to pay?</label> <br>
+                <input type="radio" id="payment-yes" value="Yes" onclick="amountField()">Yes<br>
 
-            <label for="total-amount">Enter Total Amount Shown on Student Portal</label> <br>
-            <input type="number" id="amount" placeholder="Enter the Amount" disabled> <br>
+                <label for="total-amount">Enter Total Amount Shown on Student Portal</label> <br>
+                <input type="number" id="amount" placeholder="Enter the Amount" disabled> <br>
 
-            <label for="hsc-scholarship">Do you have previous Scholarship on your H.Sc result?</label> <br>
-            <input type="radio" id="hsc-scholarship-yes" name="hsc-scholarship" onclick="schorlarshipField()"> Yes <br>
-            <input type="radio" id="hsc-scholarship-no" name="hsc-scholarship" onclick="schorlarshipField()"> No <br>
+                <label for="hsc-scholarship">Do you have previous Scholarship on your H.Sc result?</label> <br>
+                <input type="radio" id="hsc-scholarship-yes" name="hsc-scholarship" onclick="schorlarshipField()"> Yes
+                <br>
+                <input type="radio" id="hsc-scholarship-no" name="hsc-scholarship" onclick="schorlarshipField()"> No
+                <br>
 
-            <label for="scholarship-amount-parcentage">If Yes then how much? (In percentage)</label> <br>
-            <input type="number" id="scholarship-amount-parcentage" placeholder="Enter the percentage" disabled> <br>
-            <br>
+                <label for="scholarship-amount-parcentage">If Yes then how much? (In percentage)</label> <br>
+                <input type="number" id="scholarship-amount-parcentage" placeholder="Enter the percentage" disabled>
+                <br>
+                <br>
 
-            <input type="button" id="Calculate-scholarship-btn" onClick="calculateScholarship()"
-                value="Calculate the scholarship">
+                <input type="button" id="Calculate-scholarship-btn" onClick="calculateScholarship()"
+                    value="Calculate the scholarship">
 
-            <input type="button" id="calculate-amount-btn" onClick="calculateAmount()" value="Calculate the Amount">
+                <input type="button" id="calculate-amount-btn" onClick="calculateAmount()" value="Calculate the Amount">
+            </fieldset>
 
         </form>
         <p id="total-scholarship-amount-result"></p>

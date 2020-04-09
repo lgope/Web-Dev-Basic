@@ -1,4 +1,5 @@
 <?php
+session_start();
     include_once("../classes/Crud.php");
  
     $crud = new Crud();
@@ -19,5 +20,3 @@
     } else {
         echo "Problem";
     }
-
-?>

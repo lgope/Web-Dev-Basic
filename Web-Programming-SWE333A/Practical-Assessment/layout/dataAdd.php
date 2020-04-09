@@ -1,9 +1,13 @@
+<?php 
+session_start();
+
+?>
 <div id="input_form">
     <label for="student_name">Name : </label>
-    <input type="text" id="student_name"> <br>
+    <input type="text" id="student_name" value="<?php echo $_SESSION['u_name']; ?>" readonly> <br>
 
     <label for="student_id">Student Id : </label>
-    <input type="text" id="student_id"> <br>
+    <input type="text" id="student_id" value="<?php echo $_SESSION['student_id']; ?>" readonly> <br>
 
     <label for="project_title">project Title : </label>
     <input type="text" id="project_title"> <br>
@@ -55,3 +59,4 @@
         });
     });
 </script>
+

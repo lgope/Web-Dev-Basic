@@ -1,7 +1,15 @@
 <?php
+
+session_start();
+if ($_SESSION['usertype'] != 'student') {
+  // code...
+  echo "<script>window.history.back();</script>";
+}
+
 include_once("../classes/Crud.php");
 $crud = new Crud();
-$sql = "SELECT * FROM student_info ORDER BY id DESC";
+
+$sql = "SELECT * FROM student_info where student_id = " . $_SESSION['student_id'];
 $result = $crud->getAllData($sql);
 ?>
 
@@ -42,7 +50,7 @@ if (!empty($result)) {
 
 <div id="DataView"></div>
 <div id="DataAdd"></div><br> <br>
-<a href="/project-fair">Exit</a>
+<a href="logout.php">Logout</a>
 
 
 

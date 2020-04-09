@@ -1,4 +1,10 @@
 <?php
+session_start();
+if ($_SESSION['usertype'] != 'management') {
+  // code...
+  echo "<script>window.history.back();</script>";
+}
+
 include_once("../classes/Crud.php");
 $crud = new Crud();
 $sql = "SELECT * FROM proposal ORDER BY id DESC";
@@ -40,7 +46,7 @@ if (!empty($result)) {
 
 <div id="DataView"></div>
 <div id="DataAdd"></div><br> <br>
-<a href="/project-fair">Exit</a>
+<a href="logout.php">Logout</a>
 
 
 
